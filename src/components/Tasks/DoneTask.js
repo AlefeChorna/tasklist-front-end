@@ -26,6 +26,7 @@ class DoneTask extends Component {
                 <BodyTask>
                     { this.props.taskList.doneList.map(done => (
                         <Task
+                            key={done.id}
                             editTask={this.props.editTask}
                             deleteTask={this.props.deleteTask}
                             toDo={ done } 

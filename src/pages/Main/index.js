@@ -82,7 +82,6 @@ export default class Main extends Component {
 
         // Update name task
         if (this.state.taskInputId > 0) {
-            console.log(this.state.currentTask);
             await updateTask({
                 id: this.state.taskInputId,
                 name: this.state.taskInput,

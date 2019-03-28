@@ -25,6 +25,7 @@ class ProgressTask extends Component {
                 <BodyTask>
                     { this.props.taskList.progressList.map(progress => (
                         <Task
+                            key={progress.id}
                             editTask={this.props.editTask}
                             deleteTask={this.props.deleteTask}
                             toDo={ progress } 

@@ -7,7 +7,7 @@ import moment from "moment";
 
 const itemSource = {
     beginDrag(props) {
-        return props.toDo
+        return props.toDo;
     }
 }
 
@@ -21,7 +21,7 @@ function collect(connect, monitor) {
 
  class Task extends Component {
     render() {
-        const { isDragging, connectDragSource, item } = this.props;
+        const { isDragging, connectDragSource } = this.props;
         const opacity = isDragging ? 0 : 1;
         
         return connectDragSource(
