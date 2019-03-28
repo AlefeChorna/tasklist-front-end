@@ -4,7 +4,9 @@ export const Container = styled.div`
     display: flex;
     flex-direction: ${ 
         props => props.className === 'flex-direction-row' ? 
-        'row' : 'column' };
+            'row' : 
+            'column' 
+    };
     justify-content: center;
 
     margin-top: 30px;

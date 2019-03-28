@@ -118,12 +118,10 @@ export default class Main extends Component {
     }
 
     componentDidMount() {
-        console.log("componentDidMount");
         this.updateState();
     }
 
     render() {
-        console.log("Mainn");
         return (
             <Container>
                 <Form withError={ this.state.taskError } onSubmit={this.handleAddTask}>

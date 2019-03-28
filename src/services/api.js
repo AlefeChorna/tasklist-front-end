@@ -1,8 +1,7 @@
 import axios from 'axios';
-import Task from '../components/Task';
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080'
+    baseURL: 'https://webservicetasklist.herokuapp.com'
 });
 
 export const getTasks = async () => {

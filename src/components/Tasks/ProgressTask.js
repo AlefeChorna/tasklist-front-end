@@ -14,26 +14,19 @@ function collect(connect, monitor) {
 }
 
 class ProgressTask extends Component {
-    changeStatusTask = (id) => {
-        console.log('Estou em doneTask', id);
-    }
-
     onDrop = () => {
         this.props.changeStatus(this.props.item, 'progressList');
     }
 
     render() {
-        const { connectDropTarget, horeved } = this.props;
-        const backgroundColor = horeved ? 'black' : 'red';
-
+        const { connectDropTarget } = this.props;
         return connectDropTarget(
             <div className="targetProgressTask" onDrop={(e)=>{this.onDrop()}}>
                 <BodyTask>
                     { this.props.taskList.progressList.map(progress => (
                         <Task
                             editTask={this.props.editTask}
-                            deleteTask={this.props.deleteTask} 
-                            handleDrop={id => this.changeStatusTask(id)} key={ progress.id } 
+                            deleteTask={this.props.deleteTask}
                             toDo={ progress } 
                         />
                     ))}
