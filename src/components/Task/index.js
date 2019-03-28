@@ -8,13 +8,6 @@ import moment from "moment";
 const itemSource = {
     beginDrag(props) {
         return props.toDo
-    },
-    endDrag(props, monitor, component) {
-        if(!monitor.didDrop()) {
-            return;
-        }
-
-        return props.handleDrop(props.toDo.id)
     }
 }
 
